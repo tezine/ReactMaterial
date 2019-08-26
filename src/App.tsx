@@ -26,6 +26,8 @@ import {VMatButtonGroup} from "./components/material/VMatButtonGroup";
 
 class App extends Component<{}> {
 
+    checkBoxRef=React.createRef<VMatCheckBox>();
+
     render() {
         let eToolBarItemA = new EToolbarItem();
         eToolBarItemA.text = 'Save';
@@ -56,7 +58,10 @@ class App extends Component<{}> {
                         <VCircle
                             width={'100px'}
                             backgroundColor={'orange'}/>
-                        <VMatTextArea floatingLabelText={'textarea'}/>
+                        <VMatTextArea
+                            floatingLabelText={'textarea'}
+                            onTextChanged={(txt)=>this.onTextAreaChanged(txt)}
+                        />
                         <VRowLayout
                             height={'100px'}
                             backgroundColor={'lightgray'}
@@ -75,7 +80,10 @@ class App extends Component<{}> {
                             </VColumnLayout>
                         </VRowLayout>
                         <VRowLayout>
-                            <VMatCheckBox text={'VMatCheckBox'} onCheckChanged={(checked)=>this.onCheckChanged(checked)}/>
+                            <VMatCheckBox
+                                ref={this.checkBoxRef}
+                                text={'VMatCheckBox'}
+                                onCheckChanged={(checked)=>this.onCheckChanged(checked)}/>
                             <VMatRadioButton text={'radio'}/>
                             <VMatSwitch text={'switch'}/>
                         </VRowLayout>
@@ -119,7 +127,12 @@ class App extends Component<{}> {
     }
 
     private onCheckChanged(checked:boolean):void{
-        console.log('checked:',checked);
+        let checkBox=this.checkBoxRef.current;
+        if(checkBox) console.log('checked:',checked,checkBox.checked);
+    }
+
+    private onTextAreaChanged(txt:string):void{
+        console.log('txt:',txt);
     }
 }
 
