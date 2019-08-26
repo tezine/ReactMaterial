@@ -21,6 +21,7 @@ import {VMatConfirmDlg} from "./components/material/VMatConfirmDlg";
 import {VRowLayout} from "./components/base/VRowLayout";
 import {HorizontalAlignItems} from "./enums/HorizontalAlignItems";
 import {VColumnLayout} from "./components/base/VColumnLayout";
+import {VMatCheckBox} from "./components/material/VMatCheckBox";
 
 class App extends Component<{}> {
 
@@ -40,28 +41,42 @@ class App extends Component<{}> {
                     >
                         <VMatToolBar items={[eToolBarItemA]}/>
                         <VMatProgressBar/>
-                        <VMatCard title={'VMatCard'} subTitle={'subtitulo'}>Conteudo do card, bla bla bla </VMatCard>
+                        <VMatCard
+                            title={'VMatCard'}
+                            subTitle={'subtitulo'}>
+                            Conteudo do card, bla bla bla
+                        </VMatCard>
                         <VMatButton
                             text={'VMatButton'}
                             colorType={ColorType.Success}
                             onClick={(ev)=>this.onBtnClicked(ev)}
                         />
-                        <VMatSwitch text={'switch'}/>
-                        <VMatRadioButton text={'radio'}/>
                         <VMatTextField text={'ola'}/>
                         <VCircle
                             width={'100px'}
                             backgroundColor={'orange'}/>
                         <VMatTextArea floatingLabelText={'textarea'}/>
-                        <VRowLayout height={'100px'} backgroundColor={'lightgray'} horizontalAlignItems={HorizontalAlignItems.Center}>
-                            <VMatButton text={'hi'} colorType={ColorType.Primary}/>
-                            <VMatButton text={'there'} colorType={ColorType.Danger}/>
+                        <VRowLayout
+                            height={'100px'}
+                            backgroundColor={'lightgray'}
+                            horizontalAlignItems={HorizontalAlignItems.Center}>
+                            <VMatButton
+                                text={'hi'}
+                                colorType={ColorType.Primary}/>
+                            <VMatButton
+                                text={'there'}
+                                colorType={ColorType.Danger}/>
                             <VLabel text={'VRowLayout'} />
                             <VRectangle width={'100px'}/>
                             <VColumnLayout>
                                 <VLabel text={'this is a VColumnLayout item1'}/>
                                 <VLabel text={'this is a VColumnLayout item2'}/>
                             </VColumnLayout>
+                        </VRowLayout>
+                        <VRowLayout>
+                            <VMatCheckBox text={'VMatCheckBox'}/>
+                            <VMatRadioButton text={'radio'}/>
+                            <VMatSwitch text={'switch'}/>
                         </VRowLayout>
                     </VRectangle>
                     <VRectangle

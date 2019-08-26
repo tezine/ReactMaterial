@@ -10,10 +10,13 @@
 1. RadioButton
 1. SnackBar
 1. Switch
+1. CheckBox
 1. TextArea
 1. TextField
 1. ToolBar
 1. Label
 1. Rectangle
 1. GridLayout
+1. ColumnLayout
+1. RowLayout
 1. Circle
