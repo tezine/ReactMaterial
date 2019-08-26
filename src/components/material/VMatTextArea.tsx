@@ -1,6 +1,7 @@
 import {IItemProps, VItem} from "../base/VItem";
 import * as React from "react";
 
+
 export interface IMatTextAreaProps extends IItemProps{
     floatingLabelText?:string;
     placeHolderText?:string;
@@ -17,6 +18,12 @@ export class VMatTextArea extends VItem<IMatTextAreaProps> {
                 </div>
             </div>
         );
+    }
+
+    componentDidMount(): void {
+        super.componentDidMount();
+        let x:any=$('.floating-label .custom-select, .floating-label .form-control');
+        //todo x.floatinglabel();
     }
 
     onTextChanged(e:any){

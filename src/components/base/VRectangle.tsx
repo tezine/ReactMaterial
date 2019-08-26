@@ -22,7 +22,7 @@ export class VRectangle extends VItem<IRectangleProps> {
     }
 
     onRectClicked(): void {
-        console.log('rect clicked');
+        //console.log('rect clicked');
     }
 
     getStyle() {

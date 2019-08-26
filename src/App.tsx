@@ -22,6 +22,7 @@ import {VRowLayout} from "./components/base/VRowLayout";
 import {HorizontalAlignItems} from "./enums/HorizontalAlignItems";
 import {VColumnLayout} from "./components/base/VColumnLayout";
 import {VMatCheckBox} from "./components/material/VMatCheckBox";
+import {VMatButtonGroup} from "./components/material/VMatButtonGroup";
 
 class App extends Component<{}> {
 
@@ -74,10 +75,16 @@ class App extends Component<{}> {
                             </VColumnLayout>
                         </VRowLayout>
                         <VRowLayout>
-                            <VMatCheckBox text={'VMatCheckBox'}/>
+                            <VMatCheckBox text={'VMatCheckBox'} onCheckChanged={(checked)=>this.onCheckChanged(checked)}/>
                             <VMatRadioButton text={'radio'}/>
                             <VMatSwitch text={'switch'}/>
                         </VRowLayout>
+                        <VMatButtonGroup>
+                            <VMatButton text={'1'}/>
+                            <VMatButton text={'2'}/>
+                            <VMatButton text={'3'}/>
+                            <VMatButton text={'4'}/>
+                        </VMatButtonGroup>
                     </VRectangle>
                     <VRectangle
                         gridLayoutColumnStart="2"
@@ -109,6 +116,10 @@ class App extends Component<{}> {
 
     private onBtnClicked(ev:any):void{
         console.log('clicou no btn', ev);
+    }
+
+    private onCheckChanged(checked:boolean):void{
+        console.log('checked:',checked);
     }
 }
 
