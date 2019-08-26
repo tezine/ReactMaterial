@@ -1,4 +1,4 @@
-import {IItemProps, VItem} from "../VItem";
+import {IItemProps, VItem} from "../base/VItem";
 import * as React from "react";
 
 export interface IMatSwitchProps extends IItemProps {

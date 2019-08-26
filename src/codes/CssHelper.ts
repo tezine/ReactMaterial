@@ -16,12 +16,12 @@ export class CssHelper {
     static readonly Overflow: string = 'overflow';
     static readonly TextAlign: string = 'text-align';
     static readonly Color: string = 'color';
-    static readonly FlexGrow: string = 'flex-grow';
+    static readonly FlexGrow: string = 'flexGrow';
     static readonly Display: string = 'display';
-    static readonly FlexDirection: string = 'flex-direction';
-    static readonly JustifyContent: string = 'justify-content';
-    static readonly AlignItems: string = 'align-items';
-    static readonly AlignSelf: string = 'align-self';
+    static readonly FlexDirection: string = 'flexDirection';
+    static readonly JustifyContent: string = 'justifyContent';
+    static readonly AlignItems: string = 'alignItems';
+    static readonly AlignSelf: string = 'alignSelf';
     static readonly Margin: string = 'margin';
 
     static readonly Padding: string = 'padding';

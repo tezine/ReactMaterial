@@ -1,4 +1,4 @@
-import {IItemProps, VItem} from "../VItem";
+import {IItemProps, VItem} from "../base/VItem";
 import {CssHelper} from "../../codes/CssHelper";
 import * as React from "react";
 import {EToolbarItem} from "../../entities/EToolbarItem";

@@ -1,4 +1,4 @@
-import {IItemProps, VItem} from "../VItem";
+import {IItemProps, VItem} from "./VItem";
 import * as React from "react";
 import {CssHelper} from "../../codes/CssHelper";
 

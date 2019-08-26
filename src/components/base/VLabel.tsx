@@ -1,6 +1,6 @@
 import {IItemProps, VItem} from "./VItem";
 import * as React from "react";
-import {CssHelper} from "../codes/CssHelper";
+import {CssHelper} from "../../codes/CssHelper";
 
 export interface ILabelProps extends IItemProps{
      fontStyle?:string;

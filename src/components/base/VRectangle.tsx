@@ -1,7 +1,7 @@
 import * as React from "react";
 import {VItem, IItemProps} from "./VItem";
-import {BorderStyle} from "../enums/BorderStyle";
-import {CssHelper} from "../codes/CssHelper";
+import {BorderStyle} from "../../enums/BorderStyle";
+import {CssHelper} from "../../codes/CssHelper";
 
 export interface IRectangleProps extends IItemProps {
     borderStyle?: BorderStyle;

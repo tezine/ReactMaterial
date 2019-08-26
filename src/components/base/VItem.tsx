@@ -1,5 +1,7 @@
 import * as React from "react";
-import {CssHelper} from "../codes/CssHelper";
+import {CssHelper} from "../../codes/CssHelper";
+import {HorizontalAlignItems} from "../../enums/HorizontalAlignItems";
+import {VerticalAlignItems} from "../../enums/VerticalAlignItems";
 
 export class IItemProps {
     id?:string;
@@ -12,6 +14,8 @@ export class IItemProps {
     paddingLeft?:string;
     paddingRight?:string;
     centerHorizontally?:boolean;
+    horizontalAlignItems?:HorizontalAlignItems;
+    verticalAlignItems?:VerticalAlignItems;
 }
 
 // State is never set so we use the '{}' type.
