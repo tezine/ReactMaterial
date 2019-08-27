@@ -137,7 +137,7 @@ export class Home extends React.Component<RouteComponentProps<{}> & IHomeProps, 
     }
 
     private onBtnClicked(ev: any): void {
-        this.props.history.push('/page2');
+        this.props.history.push('/page2?id=20');
     }
 
     private onCheckChanged(checked: boolean): void {
