@@ -6,6 +6,7 @@ import {EToolbarItem} from "../../entities/EToolbarItem";
 export class IMatToolBarProps extends IItemProps{
     title?:string;
     items:EToolbarItem[]=[];
+    onClick?:(ev:EToolbarItem)=>void;
 }
 
 export class VMatToolBar extends VItem<IMatToolBarProps> {
@@ -24,7 +25,7 @@ export class VMatToolBar extends VItem<IMatToolBarProps> {
         let result=[];
         let i=0;
         for(let item of this.props.items){
-            result.push(<button className="btn btn-outline-secondary" style={{color:'white'}} onClick={(e)=>this.onItemClicked(e)} key={i}>
+            result.push(<button className="btn btn-outline-secondary" style={{color:'white'}} onClick={(e)=>this.onItemClicked(e,item)} key={i}>
                 {item.iconName?<i className="material-icons" style={{marginRight: '5px'}}>item.iconName</i>:null}
                 {item.text}
             </button>);
@@ -33,8 +34,8 @@ export class VMatToolBar extends VItem<IMatToolBarProps> {
         return result;
     }
 
-    onItemClicked(toolbarItem:any):void{
-
+    onItemClicked(ev:any,item:EToolbarItem):void{
+        if(this.props.onClick)this.props.onClick(item);
     }
 
     getStyle(){

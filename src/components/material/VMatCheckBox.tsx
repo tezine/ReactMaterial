@@ -1,5 +1,4 @@
 import {IItemProps, VItem} from "../base/VItem";
-import {CssHelper} from "../../codes/CssHelper";
 import * as React from "react";
 import {observable} from "mobx";
 
